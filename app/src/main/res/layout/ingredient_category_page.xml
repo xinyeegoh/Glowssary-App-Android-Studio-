@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_beige"
+    tools:context=".IngredientCategory">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/search_appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/rosy_purple"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/search_icon"
+                app:tint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="search icon"/>
+
+            <Button
+                android:id="@+id/back_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/backarrow_icon"
+                android:backgroundTint="@color/black"
+                android:contentDescription="back"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/toolbar"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintHorizontal_bias="0.039"
+                app:layout_constraintStart_toStartOf="@id/toolbar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- floating button for submit ingredient request -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/submit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:padding="10dp"
+        android:elevation="50dp"
+        android:backgroundTint="@color/rosy_purple"
+        android:src="@drawable/add_ingredient_icon"
+        android:tint="@color/black"
+        android:scaleType="fitCenter"
+        app:fabCustomSize="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="submit ingredient request"/>
+
+    <!-- VIEW ALL BUTTON -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewall_constraint"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/exfoliant_constraint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_appBarLayout">
+
+
+        <ImageButton
+            android:id="@+id/viewall_btn"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:elevation="10dp"
+            android:padding="15dp"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/rosy_purple"
+            android:src="@drawable/all_icon"
+            android:scaleType="fitCenter"
+            app:tint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="view all ingredients"/>
+
+        <TextView
+            android:id="@+id/viewall_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="All"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:fontFamily="@font/subtitle_font"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewall_btn" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- EXFOLIANT BUTTON -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/exfoliant_constraint"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_appBarLayout">
+
+        <ImageButton
+            android:id="@+id/exfoliant_btn"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:elevation="10dp"
+            android:padding="15dp"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/coral"
+            android:src="@drawable/exfoliant_icon"
+            android:scaleType="fitCenter"
+            app:tint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="exfoliant ingredients"/>
+
+        <TextView
+            android:id="@+id/exfoliant_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/subtitle_font"
+            android:text="exfoliant"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exfoliant_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- Anti Acne BUTTON -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/antiacne_constraint"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/search_appBarLayout"
+        app:layout_constraintStart_toEndOf="@id/exfoliant_constraint"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/antiacne_btn"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:padding="15dp"
+            android:elevation="10dp"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/coral"
+            android:src="@drawable/antiacne_icon"
+            android:scaleType="fitCenter"
+            app:tint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="anti acne ingredients"/>
+
+        <TextView
+            android:id="@+id/antiacne_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="anti acne"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:fontFamily="@font/subtitle_font"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/antiacne_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- HUMECTANT  BUTTON -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/humectant_constraint"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toStartOf="@+id/emollient_constraint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewall_constraint">
+
+
+        <ImageButton
+            android:id="@+id/humectant_btn"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:padding="15dp"
+            android:elevation="10dp"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/coral"
+            android:src="@drawable/humectant_icon"
+            android:scaleType="fitCenter"
+            app:tint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="humectant ingredients"/>
+
+        <TextView
+            android:id="@+id/humectant_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/subtitle_font"
+            android:text="humectant"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/humectant_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- EMOLLIENT BUTTON -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/emollient_constraint"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exfoliant_constraint">
+
+        <ImageButton
+            android:id="@+id/emollient_btn"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:padding="15dp"
+            android:elevation="10dp"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/coral"
+            android:src="@drawable/emollient_icon"
+            android:scaleType="fitCenter"
+            app:tint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="emollient ingredients"/>
+
+        <TextView
+            android:id="@+id/emollient_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/subtitle_font"
+            android:text="emollient"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emollient_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- Soothing BUTTON -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/soothing_constraint"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/antiacne_constraint"
+        app:layout_constraintStart_toEndOf="@id/emollient_constraint"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="45dp">
+
+
+        <ImageButton
+            android:id="@+id/soothing_btn"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:elevation="10dp"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/coral"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/soothing_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black"
+            android:contentDescription="soothing ingredients"/>
+
+        <TextView
+            android:id="@+id/soothing_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/subtitle_font"
+            android:text="soothing"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/soothing_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- anti aging  BUTTON -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/antiaging_constraint"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toStartOf="@+id/emollient_constraint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/humectant_constraint">
+
+
+        <ImageButton
+            android:id="@+id/antiaging_btn"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:elevation="10dp"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/coral"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/antiaging_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black"
+            android:contentDescription="antiaging ingredients"/>
+
+        <TextView
+            android:id="@+id/antiaging_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/subtitle_font"
+            android:text="anti aging"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/antiaging_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- SKIN BRIGTHENING BUTTON -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/brightening_constraint"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emollient_constraint">
+
+        <ImageButton
+            android:id="@+id/brightening_btn"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:elevation="10dp"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/coral"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/brightening_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black"
+            android:contentDescription="brightening ingredients"/>
+
+        <TextView
+            android:id="@+id/brightening_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/subtitle_font"
+            android:text="brightening"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/brightening_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- Antioxidants BUTTON -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/antioxidant_constraint"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/soothing_constraint"
+        app:layout_constraintStart_toEndOf="@id/brightening_constraint"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="42dp">
+
+
+        <ImageButton
+            android:id="@+id/antioxidant_btn"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:elevation="10dp"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/coral"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/antioxidant_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black"
+            android:contentDescription="antioxidant ingredients"/>
+
+        <TextView
+            android:id="@+id/antioxidant_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/subtitle_font"
+            android:text="antioxidant"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/antioxidant_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- surfactant  BUTTON -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/surfactant_constraint"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toStartOf="@+id/absorbent_constraint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/antiaging_constraint">
+
+
+        <ImageButton
+            android:id="@+id/surfactant_btn"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:elevation="10dp"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/coral"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/surfactant_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black"
+            android:contentDescription="surfactant ingredients"/>
+
+        <TextView
+            android:id="@+id/surfactant_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/subtitle_font"
+            android:text="surfactant"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/surfactant_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- absorbent BUTTON -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/absorbent_constraint"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brightening_constraint">
+
+        <ImageButton
+            android:id="@+id/absorbent_btn"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:elevation="10dp"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/coral"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/absorbent_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black"
+            android:contentDescription="absorbent ingredients"/>
+
+        <TextView
+            android:id="@+id/absorbent_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/subtitle_font"
+            android:text="absorbent"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/absorbent_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- HARMFUL BUTTON -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/harmful_constraint"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/antioxidant_constraint"
+        app:layout_constraintStart_toEndOf="@id/absorbent_constraint"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="45dp">
+
+
+        <ImageButton
+            android:id="@+id/harmful_btn"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:elevation="10dp"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/dark_dusty_brown"
+            android:padding="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/nasty_icon"
+            app:tint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="harmful ingredients" />
+
+        <TextView
+            android:id="@+id/harmful_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/subtitle_font"
+            android:text="harmful"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/harmful_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

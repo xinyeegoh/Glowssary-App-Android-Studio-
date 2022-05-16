@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF8F5"
+    tools:context=".MainActivity">
+
+
+    <!-- APP HEADING AREA -->
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="30dp"
+        android:fontFamily="@font/playfair_extrabold"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060" />
+
+    <TextView
+        android:id="@+id/app_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:elevation="30dp"
+        android:fontFamily="@font/content_font"
+        android:text="Your Skincare Library"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_title" />
+
+    <ImageView
+        android:id="@+id/header_panel"
+        android:layout_width="match_parent"
+        android:layout_height="123dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/rectangle"
+        app:tint="#E9D2CC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="header background" />
+
+    <ImageView
+        android:layout_width="167dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/dome_shape_verticle"
+        app:tint="#FAF8F5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/user_panel"
+        app:layout_constraintStart_toStartOf="@id/user_panel" />
+
+
+    <!-- USER PROFILE VIEW AREA -->
+
+    <TextView
+        android:id="@+id/user_panel"
+        android:elevation="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="230dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:paddingBottom="60dp"
+        android:background="@drawable/round_shape"
+        android:backgroundTint="#F2D0B3"
+        app:drawableBottomCompat="@drawable/user_icon1"
+        app:drawableTint="@color/black"
+        app:layout_constraintStart_toStartOf="@id/header_panel"
+        app:layout_constraintEnd_toEndOf="@id/header_panel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/username_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:elevation="30dp"
+        android:fontFamily="@font/proximanova_extrabold"
+        android:text="username"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/user_panel"
+        app:layout_constraintEnd_toEndOf="@+id/user_panel"
+        app:layout_constraintStart_toStartOf="@+id/user_panel" />
+
+
+    <!-- APP FEATURES AREA -->
+
+    <ImageButton
+        android:id="@+id/editprofile_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_rectangle"
+        android:contentDescription="edit profile"
+        android:elevation="30dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/edit_icon"
+        app:layout_constraintStart_toEndOf="@+id/user_panel"
+        app:layout_constraintTop_toBottomOf="@id/header_panel"
+        app:tint="@color/black" />
+
+    <ImageButton
+        android:id="@+id/signout_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:elevation="20dp"
+        android:background="@drawable/round_shape"
+        android:backgroundTint="#F2D0B3"
+        android:rotation="180"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logout_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_panel"
+        android:contentDescription="logout" />
+
+
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="20dp"
+        android:paddingStart="30dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:elevation="20dp"
+        android:background="@drawable/round_rectangle"
+        android:backgroundTint="#E9D2CC"
+        android:drawableStart="@drawable/search_icon"
+        android:drawablePadding="20dp"
+        android:drawableTint="@color/black"
+        android:fontFamily="@font/proximanova_extrabold"
+        android:shadowColor="@color/black"
+        android:text="BROWSE \nSKINCARE INGREDIENTS"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_panel" />
+
+    <Button
+        android:id="@+id/camera_btn"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:elevation="20dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/round_rectangle"
+        android:backgroundTint="#E9D2CC"
+        android:fontFamily="@font/proximanova_extrabold"
+        android:text="SCAN \nINGREDIENT LISTS"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:drawableStart="@drawable/camera_icon"
+        android:drawableTint="@color/black"
+        android:drawablePadding="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_btn" />
+
+    <Button
+        android:id="@+id/audio_btn"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:elevation="20dp"
+        android:backgroundTint="#E9D2CC"
+        android:background="@drawable/round_rectangle"
+        android:text="SEARCH BY AUDIO"
+        android:fontFamily="@font/proximanova_extrabold"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:textAlignment="textStart"
+        android:drawableStart="@drawable/mic_icon"
+        android:drawableTint="@color/black"
+        android:drawablePadding="20dp"
+        app:layout_constraintTop_toBottomOf="@id/camera_btn"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/fav_btn"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:elevation="20dp"
+        android:backgroundTint="#D7CACB"
+        android:background="@drawable/round_rectangle"
+        android:fontFamily="@font/proximanova_extrabold"
+        android:text="FAVOURITES"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:drawableStart="@drawable/favourite_filled_icon"
+        android:drawableTint="@color/black"
+        android:drawablePadding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/audio_btn" />
+
+    <Button
+        android:id="@+id/help_btn"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:elevation="20dp"
+        android:background="@drawable/round_rectangle"
+        android:backgroundTint="#A98E86"
+        android:fontFamily="@font/proximanova_extrabold"
+        android:text="HELP DESK"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:drawableStart="@drawable/help_icon"
+        android:drawablePadding="20dp"
+        android:drawableTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fav_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

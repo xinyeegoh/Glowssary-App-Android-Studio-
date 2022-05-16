@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- actionView is where we allow
+    an action to be added to an element in the layout-->
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/search_icon"
+        android:iconTint="@color/black"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always"
+        android:title="SEARCH" />
+
+
+</menu>

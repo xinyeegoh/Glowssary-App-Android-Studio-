@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 2nd THEME -->
+    <color name="dark_dusty_brown">#A98E86</color>
+    <color name="rosy_purple">#D7CACB</color>
+    <color name="beige_pink">#F0E4DD</color>
+    <color name="light_pink">#E9D2CC</color>
+    <color name="coral">#F2D0B3</color>
+    <color name="light_beige">#FAF8F5</color>
+
+    <!-- 3rd THEME -->
+    <color name="baby_blue">#AFC2D5</color>
+    <color name="light_yellow">#F4EEDC</color>
+    <color name="med_yellow">#EDD892</color>
+    <color name="light_green">#CCDED3</color>
+    <color name="avo_green">#BDBEA8</color>
+    <color name="milk_green">#ccd5ae</color>
+    <color name="light_brown">#C6B99E</color>
+    <color name="light_goldenrod_yellow">#E9DEC9</color>
+    <color name="light_grey">#F1F1F1</color>
+
+    <!-- 4th THEME -->
+    <color name="dark_orange_red">#C2715F</color>
+    <color name="med_red">#AD7A76</color>
+    <color name="med_orange_red">#D38D73</color>
+    <color name="med_brown">#d4a373</color>
+    <color name="teal">#5E8D93</color>
+
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1375" />
+        <entry key="app/src/main/res/drawable/add_ingredient_icon.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/arrowdown_icon.xml" value="0.14166666666666666" />
+        <entry key="app/src/main/res/drawable/camera_icon.xml" value="0.26145833333333335" />
+        <entry key="app/src/main/res/drawable/dome_shape.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/dome_shape_horizontal.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/dome_shape_verticle.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/expand_icon.xml" value="0.14166666666666666" />
+        <entry key="app/src/main/res/drawable/favourite_filled_icon.xml" value="0.26145833333333335" />
+        <entry key="app/src/main/res/drawable/favourite_icon.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/favourite_outline_icon.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/favouritebtn_action.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/favouritefull_icon.xml" value="0.26145833333333335" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1375" />
+        <entry key="app/src/main/res/drawable/irregular.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/irregular1.xml" value="0.26197916666666665" />
+        <entry key="app/src/main/res/drawable/irregular2.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/lock_icon.xml" value="0.26145833333333335" />
+        <entry key="app/src/main/res/drawable/logout_icon.xml" value="0.26145833333333335" />
+        <entry key="app/src/main/res/drawable/rectangle.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/round_rectangle.xml" value="0.26145833333333335" />
+        <entry key="app/src/main/res/drawable/round_rectangle_filled.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/round_rectangle_filled_brownwhite.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/round_rectangle_filled_greenwhite.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/round_rectangle_filled_redwhite.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/round_rectangle_filled_yellowwhite.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/round_rectangle_greenwhite.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/round_rectangle_outline.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/round_shape.xml" value="0.26145833333333335" />
+        <entry key="app/src/main/res/drawable/save_icon.xml" value="0.26197916666666665" />
+        <entry key="app/src/main/res/drawable/search_icon.xml" value="0.14166666666666666" />
+        <entry key="app/src/main/res/drawable/unfavourite_icon.xml" value="0.26145833333333335" />
+        <entry key="app/src/main/res/drawable/user_icon.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/user_icon2.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/drawable/usermanual_icon.xml" value="0.26197916666666665" />
+        <entry key="app/src/main/res/font/heading_font.xml" value="0.2755208333333333" />
+        <entry key="app/src/main/res/layout-v23/help_page.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/add_ing.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/audio_denied_popup.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/audio_ingredient_page.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/camera_capture_page.xml" value="0.23125" />
+        <entry key="app/src/main/res/layout/camera_ingredient_page.xml" value="0.2421875" />
+        <entry key="app/src/main/res/layout/change_password_popup.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/first_page.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.1234375" />
+        <entry key="app/src/main/res/layout/help_page.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/ingredient_category_page.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/ingredient_detail_page.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/ingredient_detail_view.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/ingredient_fav_page.xml" value="0.2453125" />
+        <entry key="app/src/main/res/layout/ingredient_list_page.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/item_view.xml" value="0.21014492753623187" />
+        <entry key="app/src/main/res/layout/main_page.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/multiple_ingredient_recyclerview.xml" value="0.2421875" />
+        <entry key="app/src/main/res/layout/product_detail_page.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/reset_password_page.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/single_featured_product_view.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/single_ingredient_cardview.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/single_item_view.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/single_product_view.xml" value="0.24375" />
+        <entry key="app/src/main/res/layout/submit_ingredient_page.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/user_profile.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/user_signin_page.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/user_signup_page.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/view_ing.xml" value="0.12409420289855072" />
+        <entry key="app/src/main/res/menu/search.xml" value="0.25" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.25885416666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

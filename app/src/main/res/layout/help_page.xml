@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_beige"
+    tools:context=".HelpDesk">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/help_appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/dark_dusty_brown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/help_logo_toolbar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/help_icon"
+                app:tint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="help desk logo" />
+
+            <Button
+                android:id="@+id/back_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/backarrow_icon"
+                android:backgroundTint="@color/black"
+                android:contentDescription="back"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintHorizontal_bias="0.039"
+                app:layout_constraintStart_toStartOf="@id/toolbar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <Button
+        android:id="@+id/aboutus_btn"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:elevation="20dp"
+        android:background="@drawable/round_rectangle"
+        android:backgroundTint="@color/coral"
+        android:drawableStart="@drawable/smiley_icon"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/black"
+        android:fontFamily="@font/proximanova_extrabold"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="ABOUT US"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/help_appBarLayout"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <Button
+        android:id="@+id/usermanual_btn"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:elevation="20dp"
+        android:backgroundTint="@color/dark_dusty_brown"
+        android:background="@drawable/round_rectangle"
+        android:drawableStart="@drawable/usermanual_icon"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/light_beige"
+        android:fontFamily="@font/proximanova_extrabold"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="HOW TO USE GLOWSSARY"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        android:textColor="@color/light_beige"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutus_btn"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <Button
+        android:id="@+id/faq_btn"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:elevation="20dp"
+        android:backgroundTint="@color/dark_dusty_brown"
+        android:background="@drawable/round_rectangle"
+        android:drawableStart="@drawable/help_icon"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/light_beige"
+        android:fontFamily="@font/proximanova_extrabold"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="FAQ"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        android:textColor="@color/light_beige"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usermanual_btn" />
+
+    <Button
+        android:id="@+id/contact_us_btn"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:elevation="20dp"
+        android:backgroundTint="@color/dark_dusty_brown"
+        android:background="@drawable/round_rectangle"
+        android:drawableStart="@drawable/email_icon"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/light_beige"
+        android:fontFamily="@font/proximanova_extrabold"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="CONTACT US"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        android:textColor="@color/light_beige"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/faq_btn"/>
+
+    <Button
+        android:id="@+id/privacypolicy_btn"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:elevation="20dp"
+        android:backgroundTint="@color/dark_dusty_brown"
+        android:background="@drawable/round_rectangle"
+        android:drawableStart="@drawable/lock_icon"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/light_beige"
+        android:fontFamily="@font/proximanova_extrabold"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="PRIVACY POLICY"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        android:textColor="@color/light_beige"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact_us_btn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

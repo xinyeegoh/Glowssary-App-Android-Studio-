@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "709492952197",
+    "firebase_url": "https://mdp-coursework-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "mdp-coursework",
+    "storage_bucket": "mdp-coursework.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709492952197:android:c1a27afd7564cb39632dec",
+        "android_client_info": {
+          "package_name": "com.example.mdpcoursework"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709492952197-n65rsve0ujtl436q64hdfedfg4ll5oo8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOcsfFvHS0cW1v6V5vKR06Zjpx8RblJe0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709492952197-n65rsve0ujtl436q64hdfedfg4ll5oo8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

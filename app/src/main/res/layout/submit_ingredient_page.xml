@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_beige"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    tools:context=".SubmitIngredientRequest">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ingredient_request_appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ingredient_request_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/rosy_purple"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/back_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:elevation="20dp"
+                android:background="@drawable/backarrow_icon"
+                android:backgroundTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.039"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="back"/>
+
+            <ImageView
+                android:id="@+id/submit_logo_toolbar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/add_ingredient_icon"
+                app:tint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="submit ingredient logo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- floating button to return to main page (home) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/home_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:elevation="50dp"
+        android:backgroundTint="@color/dark_dusty_brown"
+        android:src="@drawable/home_icon"
+        android:scaleType="fitCenter"
+        android:tint="@color/black"
+        app:fabCustomSize="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="go back to home page"/>
+
+
+    <!-- submit request area -->
+    <TextView
+        android:id="@+id/ingredient_request_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="Can't find the ingredient?\nLet us know!"
+        android:fontFamily="@font/proximanova_extrabold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/ingredient_request_edittxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/ingredient_request_edittxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="300dp"
+        android:minHeight="70dp"
+        android:hint="Insert ingredient request here"
+        android:inputType="text"
+        android:fontFamily="@font/content_font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ingredient_request_appBarLayout"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="150dp"
+        android:layout_marginTop="20dp"
+        android:elevation="20dp"
+        android:text="Submit"
+        android:fontFamily="@font/proximanova_extrabold"
+        android:textSize="15sp"
+        android:background="@drawable/round_rectangle"
+        android:backgroundTint="@color/rosy_purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ingredient_request_edittxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

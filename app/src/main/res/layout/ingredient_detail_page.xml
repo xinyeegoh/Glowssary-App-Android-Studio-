@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    tools:context=".IngredientDetail">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ingredient_detail_appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/dark_dusty_brown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/back_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/backarrow_icon"
+                android:backgroundTint="@color/black"
+                android:contentDescription="back"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/toolbar"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintHorizontal_bias="0.039"
+                app:layout_constraintStart_toStartOf="@id/toolbar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/ingredient_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/proximanova_extrabold"
+                android:text="Skincare Ingredient\n name"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.849"
+                app:layout_constraintStart_toEndOf="@id/back_btn"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ingredient_detail_appBarLayout">
+
+      <!-- floating button to return to main page (home) -->
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/home_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:elevation="50dp"
+            android:backgroundTint="@color/rosy_purple"
+            android:src="@drawable/home_icon"
+            android:scaleType="fitCenter"
+            android:tint="@color/black"
+            app:fabCustomSize="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+          android:contentDescription="go to main page, home "/>
+
+      <!-- Scroll View for Ingredient Detail -->
+      <ScrollView
+        android:id="@+id/ingredient_detail_scrowview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbarSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- INGREDIENT DETAIL ELEMENTS -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+          <!-- FAVOURITE button -->
+          <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/favourite_constraint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ToggleButton
+                android:id="@+id/favourite_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="20dp"
+                android:elevation="20dp"
+                android:textOn=""
+                android:textOff=""
+                android:background="@drawable/favouritebtn_action"
+                android:backgroundTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+          <!-- WHAT IT IS - INGREDIENT TYPE -->
+          <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ingredient_type_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/ingredient_type_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="WHAT IT IS"
+                android:fontFamily="@font/subtitle_font"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/ingredient_type_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="description for ingredient type\njddjjd\nhfhfhfhfhfhfh"
+                android:fontFamily="@font/content_font"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/ingredient_type_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+          <!-- Other names of Ingredients -->
+          <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ingredient_other_names_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ingredient_type_constraint">
+
+            <TextView
+                android:id="@+id/ingredient_other_names_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="ALSO KNOWN AS"
+                android:fontFamily="@font/subtitle_font"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/ingredient_other_names_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="other names list here"
+                android:fontFamily="@font/content_font"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/ingredient_other_names_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!-- USAGE of Ingredients -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ingredient_usage_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ingredient_other_names_constraint">
+
+            <TextView
+                android:id="@+id/ingredient_usage_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="USAGE"
+                android:fontFamily="@font/subtitle_font"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/ingredient_usage_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="usage list here\nhfhfh\nhfhfhhf\nhfhfhfh\nfhhfhfh"
+                android:fontFamily="@font/content_font"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/ingredient_usage_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!-- RATINGS of Ingredients -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ingredient_rating_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ingredient_usage_constraint">
+
+            <TextView
+                android:id="@+id/ingredient_rating_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="RATINGS"
+                android:fontFamily="@font/subtitle_font"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/ingredient_ratings_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="Gold-standard / Good / Fair / Nasty "
+                android:fontFamily="@font/content_font"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/ingredient_rating_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- FEATURED IN of Ingredients -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ingredient_featured_in_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ingredient_rating_constraint">
+
+            <TextView
+                android:id="@+id/ingredient_featured_in_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="FEATURED IN"
+                android:fontFamily="@font/subtitle_font"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ListView
+                android:id="@+id/ingredient_featured_in_listview"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:paddingBottom="20dp"
+                app:layout_constraintTop_toBottomOf="@id/ingredient_featured_in_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+      </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
